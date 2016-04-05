@@ -24,7 +24,7 @@ import com.mediamonks.googleflip.util.SoundManager;
 import com.pixplicity.easyprefs.library.Prefs;
 
 import org.hitlabnz.sensor_fusion_demo.orientationProvider.AccelerometerCompassProvider;
-import org.hitlabnz.sensor_fusion_demo.orientationProvider.AccelerometerProvider;
+//import org.hitlabnz.sensor_fusion_demo.orientationProvider.AccelerometerProvider;
 import org.hitlabnz.sensor_fusion_demo.orientationProvider.OrientationProvider;
 import org.hitlabnz.sensor_fusion_demo.orientationProvider.RotationVectorProvider;
 
@@ -175,7 +175,8 @@ public class GoogleFlipGameApplication extends Application implements Applicatio
             } else if (sensorManager.getSensorList(Sensor.TYPE_MAGNETIC_FIELD).size() > 0) {
                 sOrientationProvider = new AccelerometerCompassProvider(sensorManager);
             } else {
-                sOrientationProvider = new AccelerometerProvider(sensorManager);
+                sOrientationProvider = new AccelerometerCompassProvider(sensorManager);
+//                sOrientationProvider = new AccelerometerProvider(sensorManager);
             }
         }
         return sOrientationProvider;

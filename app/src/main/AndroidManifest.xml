@@ -20,6 +20,10 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
         android:fullBackupContent="true">
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="9a90df0be61992aa50b2b622df46b11d1e143c90" />
+
         <activity
             android:name=".pages.game.FlipGameActivity"
             android:configChanges="orientation|screenSize"
